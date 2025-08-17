@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "0.0.0.0", // Allow all network interfaces
     port: 3000, // Changed from 8080 to avoid permission issues
+    base: process.env.VITE_BASE_PATH || "/policy-ai-frontend",
     allowedHosts: true, // Allow all hosts
     cors: true, // Enable CORS
     headers: {
